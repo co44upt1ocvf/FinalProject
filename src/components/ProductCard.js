@@ -37,20 +37,20 @@ const ProductCard = ({ product }) => {
         <ButtonGroup className="btn-group">
           {isInFavorites ? (
             <Button variant="danger" onClick={handleRemoveFromFavorites}>
-              <img src='https://i.ibb.co/HtnDpkL/recycle-bin.png' alt="Remove from Favorites" />
+              <img className='icons' src='https://i.ibb.co/HtnDpkL/recycle-bin.png' alt="Remove from Favorites" />
             </Button>
           ) : (
             <Button variant="success" onClick={handleAddToFavorites}>
-              <img src='https://i.ibb.co/b2mBmbR/heart.png' alt="Add to Favorites" />
+              <img className='icons' src='https://i.ibb.co/b2mBmbR/heart.png' alt="Add to Favorites" />
             </Button>
           )}
           {isInCart ? (
             <Button variant="danger" onClick={handleRemoveFromCart}>
-              <img src='https://i.ibb.co/HtnDpkL/recycle-bin.png' alt="Remove from Cart" />
+              <img className='icons' src='https://i.ibb.co/HtnDpkL/recycle-bin.png' alt="Remove from Cart" />
             </Button>
           ) : (
             <Button variant="primary" onClick={handleAddToCart}>
-              <img src='https://i.ibb.co/4JGpy2t/shopping-cart.png' alt="Add to Cart" />
+              <img className='icons' src='https://i.ibb.co/4JGpy2t/shopping-cart.png' alt="Add to Cart" />
             </Button>
           )}
         </ButtonGroup>
