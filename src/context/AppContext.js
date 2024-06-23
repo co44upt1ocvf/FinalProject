@@ -7,7 +7,9 @@ const AppProvider = ({ children }) => {
   const [cart, setCart] = React.useState([]);
 
   const addToFavorites = (product) => {
-    setFavorites([...favorites, product]);
+    if (!favorites.some(favorite => favorite.id === product.id)) {
+      setFavorites([...favorites, product]);
+    }
   };
 
   const removeFromFavorites = (productId) => {

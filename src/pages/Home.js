@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ContactForm from '../components/ContactForm/ContactForm.js';
 import ProductCard from '../components/ProductCard.js';
-import { motion } from 'framer-motion';
+import { Container, Row, Col } from 'react-bootstrap';
+import '../styles/Home.css';
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -14,25 +15,22 @@ const Home = () => {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="home"
-    >
-      <h1>Welcome to Appliance Store</h1>
+    <Container className="home">
+      <h1>Добро пожаловать в DNR</h1>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod
-        euismod nisl, non ultricies nunc.
+        Лучшая техника для вас! Любые способы оплаты! Документы на технику и гарантийный срок имеется. Остались вопросы?
+        Напиши нам!
       </p>
       <ContactForm />
-      <h2>Top Products</h2>
-      <div className="product-list">
+      <h2>Топ продаж</h2>
+      <Row>
         {products.map(product => (
-          <ProductCard key={product.id} product={product} />
+          <Col key={product.id}>
+            <ProductCard product={product} />
+          </Col>
         ))}
-      </div>
-    </motion.div>
+      </Row>
+    </Container>
   );
 };
 

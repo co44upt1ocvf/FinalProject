@@ -1,22 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Navbar, Nav } from 'react-bootstrap';
+import '../styles/Header.css';
 
 const Header = () => {
   return (
-    <motion.header
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="header"
-    >
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/catalog">Catalog</Link>
-        <Link to="/favorites">Favorites</Link>
-        <Link to="/cart">Cart</Link>
-      </nav>
-    </motion.header>
+    <Navbar bg="light" expand="lg" className="header">
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/catalog" className="nav-link">Каталог</Link>
+          <Link to="/favorites" className="nav-link">Избранное</Link>
+          <Link to="/cart" className="nav-link">Корзина</Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 

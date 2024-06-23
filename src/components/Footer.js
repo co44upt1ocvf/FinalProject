@@ -1,16 +1,14 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Container } from 'react-bootstrap';
+import '../styles/Footer.css';
 
 const Footer = () => {
   return (
-    <motion.footer
-      initial={{ y: 100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="footer"
-    >
-      <p>&copy; 2022 Appliance Store</p>
-    </motion.footer>
+    <footer>
+      <Container>
+        <p>&copy; 2024 Appliance Store</p>
+      </Container>
+    </footer>
   );
 };
 

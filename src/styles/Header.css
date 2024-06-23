@@ -1,0 +1,22 @@
+.header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.header nav a:hover {
+    color: #007bff;
+}
